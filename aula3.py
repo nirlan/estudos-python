@@ -29,8 +29,8 @@ print('f)', res)
 res = 34 < 30 or 29 < 30 or 31 < 30
 print('g)', res)
 
-# Traduza as afirmações a seguir para condicionais em Python:
 # Condicionais simples
+# Traduza as afirmações a seguir para condicionais em Python:
 
 # a) se idade é maior que 60, escreva: "Você tem direitos aos benefícios"
 idade = 64
@@ -50,3 +50,21 @@ if dano > 10 and escudo == 0:
 norte, sul, leste, oeste = False, True, False, False
 if norte or sul or leste or oeste:
     print('Você escapou!')
+
+# Condicionais compostas
+# a) se ano é divisível por 4, escreva: "Pode ser um ano bissexto". Caso
+# contrário, escreva: "Definitivamente não é um ano bissexto"
+ano = 1982
+if ano % 4 == 0:
+    print('Pode ser um ano bissexto')
+else:
+    print('Definitivamente não é um ano bissexto')
+
+# b) se ambas as variáveis booleanas cima e baixo forem True, escreva:
+# "Decida-se!", caso contrário, escreva: "Você escolheu um caminho!"
+cima, baixo = True, False
+if cima and baixo:
+    print('Decida-se!')
+else:
+    print('Você escolheu um caminho!')
+
