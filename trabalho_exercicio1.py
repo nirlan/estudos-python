@@ -55,3 +55,4 @@ while continua:
     #  do início do programa, recomeçando o loop.
     if not continua:
         print('Saindo do programa...')
+
