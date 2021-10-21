@@ -135,11 +135,15 @@ def primeira_fase():
     Essa função executa a primeira fase do jogo. Primeiro ela imprime na tela
     as instruções da fase 1, define uma lista de listas que contém a organização
     dos quartos e imprime na tela essa lista. Em seguida ela define uma lista de
-    posições permitidas e pergunta para o usuário a primeira jogada. A primeira
-    jogada é removida da lista de jogadas possíveis e em seguida é solicitado
-    ao usuário a segunda jogada. Se a segunda jogada for igual à posição 6,
-    isso quer dizer que o GATO ficou ao lado do RATO, o que não pode pelas
-    regras do jogo, e a função retorna 0. Caso contrário a função retorna 1.
+    posições permitidas e pergunta para o usuário a primeira jogada - função
+    'valida_jogada()'. A primeira jogada é adicionada a um dicionário que
+    armazena como chave a posição escolhida pelo usuário e como valor a string
+    do hóspede (‘C’ – cão / ‘G’ – gato / ‘R’ – rato / ‘O’ – osso / ‘Q’ – queijo).
+    Após isso a posição escolhida é removida da lista de jogadas possíveis e em
+    seguida é solicitado ao usuário a jogada seguinte. A lista de listas com
+    ocupação dos quartos é atualizada - função 'atualiza_quartos()' - e passada
+    como parâmetro para a função ganhou(), que retornar 1 caso o usuário tenha
+    vencido a fase e 0 se o usuário perdeu.
     :return: 0 se o usuário perder o jogo e 1 se passar de fase
     """
     print('\nBem vindos a fase 1!')
@@ -151,7 +155,8 @@ def primeira_fase():
                ['R', '-', '*', '*']]
     imprime_quartos(quartos)
 
-    # Define uma lista com as posições dos quartos vazios
+    # Define uma lista com as posições dos quartos vazios (posições possíveis de
+    # serem jogadas)
     posicoes = posicoes_permitidas(quartos)
 
     # Dicionário para armazenar as strings dos hóspedes ('G' = gato, 'R' = rato,
@@ -189,12 +194,15 @@ def segunda_fase():
     Essa função executa a segunda fase do jogo. Primeiro ela imprime na tela
     as instruções da fase 2, define uma lista de listas que contém a organização
     dos quartos e imprime na tela essa lista. Em seguida ela define uma lista de
-    posições permitidas e pergunta para o usuário a primeira jogada. A primeira
-    jogada é removida da lista de jogadas possíveis e em seguida é solicitado
-    ao usuário a segunda jogada e assim por diante. Se a terceira jogada for
-    diferente da posição 1, isso quer dizer que o OSSO ficou ao lado de um CÃO,
-    o que não pode pelas regras do jogo, e a função retorna 0. Caso contrário
-    a função retorna 1.
+    posições permitidas e pergunta para o usuário a primeira jogada - função
+    'valida_jogada()'. A primeira jogada é adicionada a um dicionário que
+    armazena como chave a posição escolhida pelo usuário e como valor a string
+    do hóspede (‘C’ – cão / ‘G’ – gato / ‘R’ – rato / ‘O’ – osso / ‘Q’ – queijo).
+    Após isso a posição escolhida é removida da lista de jogadas possíveis e em
+    seguida é solicitado ao usuário a jogada seguinte. A lista de listas com
+    ocupação dos quartos é atualizada - função 'atualiza_quartos()' - e passada
+    como parâmetro para a função ganhou(), que retornar 1 caso o usuário tenha
+    vencido a fase e 0 se o usuário perdeu.
     :return: 0 se o usuário perder o jogo e 1 se passar de fase
     """
     print('\nBem vindos a fase 2!')
@@ -226,13 +234,16 @@ def terceira_fase():
     """
     Essa função executa a terceira fase do jogo. Primeiro ela imprime na tela
     as instruções da fase 3, define uma lista de listas que contém a organização
-    dos quartos dessa fase e imprime na tela essa lista. Em seguida ela define
-    uma lista de posições permitidas e pergunta para o usuário a primeira jogada.
-    A primeira jogada é removida da lista de jogadas possíveis e em seguida é
-    solicitado ao usuário a segunda jogada e assim por diante. Se a terceira
-    jogada for diferente da posição 1, isso quer dizer que o OSSO ficou ao lado
-    de um CÃO, o que não pode pelas regras do jogo, e a função retorna 0. Caso
-    contrário a função retorna 1.
+    dos quartos dessa fase e imprime na tela essa lista. Em seguida ela define uma lista de
+    posições permitidas e pergunta para o usuário a primeira jogada - função
+    'valida_jogada()'. A primeira jogada é adicionada a um dicionário que
+    armazena como chave a posição escolhida pelo usuário e como valor a string
+    do hóspede (‘C’ – cão / ‘G’ – gato / ‘R’ – rato / ‘O’ – osso / ‘Q’ – queijo).
+    Após isso a posição escolhida é removida da lista de jogadas possíveis e em
+    seguida é solicitado ao usuário a jogada seguinte. A lista de listas com
+    ocupação dos quartos é atualizada - função 'atualiza_quartos()' - e passada
+    como parâmetro para a função ganhou(), que retornar 1 caso o usuário tenha
+    vencido a fase e 0 se o usuário perdeu.
     :return: 0 se o usuário perder o jogo e 1 se passar de fase
     """
     print('\nBem vindos a fase 3!')
@@ -264,13 +275,16 @@ def quarta_fase():
     """
     Essa função executa a quarta fase do jogo. Primeiro ela imprime na tela
     as instruções da fase 4, define uma lista de listas que contém a organização
-    dos quartos dessa fase e imprime na tela essa lista. Em seguida ela define
-    uma lista de posições permitidas e pergunta para o usuário a primeira jogada.
-    A primeira jogada é removida da lista de jogadas possíveis e em seguida é
-    solicitado ao usuário a segunda jogada e assim por diante. Se a terceira
-    jogada for diferente da posição 1, isso quer dizer que o OSSO ficou ao lado
-    de um CÃO, o que não pode pelas regras do jogo, e a função retorna 0. Caso
-    contrário a função retorna 1.
+    dos quartos dessa fase e imprime na tela essa lista. Em seguida ela define uma lista de
+    posições permitidas e pergunta para o usuário a primeira jogada - função
+    'valida_jogada()'. A primeira jogada é adicionada a um dicionário que
+    armazena como chave a posição escolhida pelo usuário e como valor a string
+    do hóspede (‘C’ – cão / ‘G’ – gato / ‘R’ – rato / ‘O’ – osso / ‘Q’ – queijo).
+    Após isso a posição escolhida é removida da lista de jogadas possíveis e em
+    seguida é solicitado ao usuário a jogada seguinte. A lista de listas com
+    ocupação dos quartos é atualizada - função 'atualiza_quartos()' - e passada
+    como parâmetro para a função ganhou(), que retornar 1 caso o usuário tenha
+    vencido a fase e 0 se o usuário perdeu.
     :return: 0 se o usuário perder o jogo e 1 se passar de fase
     """
     print('\nBem vindos a fase 4!')
